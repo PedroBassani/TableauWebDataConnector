@@ -5,19 +5,24 @@
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
-            id: "imdbID",
+            id: "title",
+            alias: "Title",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "year",
             alias: "Year",
             dataType: tableau.dataTypeEnum.float
         }, {
-            id: "title",
-            alias: "Title",
+            id: "imdbID",
+            alias: "imdbID",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "type",
             alias: "Type",
+            dataType: tableau.dataTypeEnum.string
+        }, {
+            id: "poster",
+            alias: "Poster",
             dataType: tableau.dataTypeEnum.string
         }];
 
@@ -39,10 +44,11 @@
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "imdbID": feat[i].properties.imdbID,
-                    "year": feat[i].properties.year,
                     "title": feat[i].properties.title,
+                    "year": feat[i].properties.year,
+                    "imdbID": feat[i].properties.imdbID,
                     "type": feat[i].properties.type,
+                    "poster": feat[i].properties.poster
                 });
             }
 
