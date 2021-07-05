@@ -39,7 +39,7 @@
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "imdbID": feat[i].id,
+                    "imdbID": feat[i].properties.imdbID,
                     "year": feat[i].properties.year,
                     "title": feat[i].properties.title,
                     "type": feat[i].properties.type,
