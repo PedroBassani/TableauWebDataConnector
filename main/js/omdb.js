@@ -40,11 +40,11 @@
 
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "title": feat[i].title,
-                    "year": feat[i].year,
+                    "title": feat[i].Title,
+                    "year": feat[i].Year,
                     "imdbID": feat[i].imdbID,
-                    "type": feat[i].type,
-                    "poster": feat[i].poster
+                    "type": feat[i].Type,
+                    "poster": feat[i].Poster
                 });
             }
 
